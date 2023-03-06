@@ -1,0 +1,14 @@
+function palindrome(ch) {
+  if (ch.length <= 1) {
+    return true;
+  }
+  else if (ch[0] == ch[ch.length - 1]) {
+    return palindrome(ch.slice(1,ch.length - 1));
+  }
+  return false;
+}
+var ch="ACAB"
+if(palindrome(ch))
+    console.log(ch+" :palindrome")
+else
+    console.log(ch+" :not palindrome")
